@@ -85,3 +85,7 @@ h1 {
 p {
     margin-bottom: 50px;
 }
+
+audio::-webkit-media-controls-panel {
+    background-color: #00a046;
+}
