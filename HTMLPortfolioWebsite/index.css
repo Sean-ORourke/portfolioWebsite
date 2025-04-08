@@ -87,5 +87,5 @@ p {
 }
 
 audio::-webkit-media-controls-panel {
-    background-color: #00a046;
+    background-color: rgb(170, 255, 227);
 }
