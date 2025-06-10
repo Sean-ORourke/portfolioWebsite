@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" media="screen and (max-width: 1230px)" href="../mobile.css" />
+    <link rel="stylesheet" media="screen and (min-width: 1230px)" href="../index.css" />
     <title>Projects</title>
 </head>
 
@@ -72,8 +73,8 @@
                 <p>Youtube Video Link</p>
             </a>
 
-            <img src="../assets/AudacityProjectFile.png" alt="Timeline working on audio narrative in Audacity"
-                style="width: 30%; margin-right: 5%; ">
+            <img id="audacityTimeline" src="../assets/AudacityProjectFile.png" alt="Timeline working on audio narrative in Audacity"
+                style=" margin-right: 5%; ">
 
             <audio controls>
                 <source src="../assets/SonicTrailersMusicAnalysis.mp3"
@@ -183,13 +184,13 @@
 
         <div>
 
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/vzOYmiIsOdU?si=jZiCPFDglw5iysTW"
+            <iframe id="flexVideo" src="https://www.youtube.com/embed/vzOYmiIsOdU?si=jZiCPFDglw5iysTW"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-            <img src="../assets/PremiereProjectFile.png" alt="Timeline working on video essay in Adobe Primere Pro"
-                style="float: right; height: 315;">
+            <img id="primereTimeline" src="../assets/PremiereProjectFile.png" alt="Timeline working on video essay in Adobe Primere Pro"
+                style="float: right; ">
 
         </div>
 
