@@ -16,18 +16,132 @@
     <h1>Technical Art Projects</h1>
 
     <div class="Project">
-        <h2><a rel="stylesheet" href="https://github.com/Sean-ORourke/HLSL-Shader">HLSL-Shader</h2>
+        <h3><a rel="stylesheet" href="https://github.com/Sean-ORourke/HLSL-Shader">Outline Shader with Adjustable Material Properties</h3>
         
             <!-- <img src="../assets/Outline_Shader_Thumbnail.png"
                 alt="Thumbnail image for the HLSL-Shader GitHub repository, showing a 3D model of a sphere with an outline shader applied."> -->
         </a>
 
+        <h3>HLSL Shader Creation in Unity URP</h3>
+
         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/FNbYnIuK3zo?si=r7iNx0FOqE0jsN25" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+<p>
+  This project is a custom outline shader written in HLSL using Unity’s ShaderLab
+  syntax for the Universal Render Pipeline (URP). I created it as a focused
+  learning exercise to gain hands-on experience with HLSL, shader fundamentals,
+  and Unity’s Universal Render Pipeline.
+</p>
+
+<h3>Editor Adjustable Attributes</h3>
+
+<img
+  src="../assets/Editable_Attributes.png"
+  alt="Material Attributes in Unity Editor."
+/>
+
+<p>
+  My outline shader has several adjustable attributes which can be changed in the
+  material editor. This allows the user of the material to easily customize the
+  shader’s behavior without modifying code.
+</p>
+
+<ul style="margin-top: -50px;">
+  <li>
+    I enjoyed learning about toggles, which enables the user to toggle the outline
+    on and off, and switch between a procedurally determined outline color or a
+    manually selected one.
+  </li>
+
+  <li>
+    For the procedurally determined border color, I used the <code>dot()</code>
+    function to calculate the grayscale luminance value of the base color, and
+    then used that luminance value to drive a <code>lerp()</code> blend for the
+    outline color.
+  </li>
+
+  <li>
+    Additionally, the user of the material can adjust the base color, select a
+    texture, modify texture tiling, and control the width of the outline.
+  </li>
+</ul>
+
+<h3>In Progress and Future Directions</h3>
+
+<img
+  src="../assets/In_Progress_Photo.png"
+  alt="Unity editor showing the shader in an earlier state, without toggles."
+/>
+
+<p>
+  My goal for this project was to learn the fundamentals of HLSL and ShaderLab by
+  throwing myself into the process and learning through iteration. I now feel I
+  have a solid understanding of variable declaration, data types, structs,
+  interpolators, and per-vertex versus per-fragment logic in HLSL.
+</p>
+
+<p>
+  I also learned several important conventions and optimizations, such as
+  utilizing floats instead of booleans for toggles, and using the
+  <code>lerp()</code> function with a 0/1 value instead of an if/else statement. I
+  implemented this approach after learning that avoiding branching logic is
+  generally more GPU-friendly. Using floats instead of booleans also allows these
+  values to be directly composed into mathematical functions like
+  <code>lerp()</code>.
+</p>
+
+<p>
+  Additionally, I learned how human perceptual weighting of RGB channels applies
+  to perceived luminance in the digital RGBA color spectrum, and how to account
+  for this using weighted modifiers inside the <code>dot()</code> function.
+  Experimenting with multiple implementations helped reinforce these conventions
+  and gave me a more intuitive understanding of how shader math translates to
+  visual results.
+</p>
+
+<img
+  src="../assets/Outline_Collision_Bug.png"
+  alt="Sphere Intersecting with Border."
+/>
+
+<p>
+  One known issue is that intersecting geometry can become visible inside the
+  outline, breaking the illusion of a solid border. With more time, I would
+  address this using depth-based techniques or stencil buffer approaches to
+  ensure the outline remains visually solid, even in close-up or narrative-driven
+  scenes.
+</p>
+
     </div>
 
     <div class="Project">
         <h1>
-            Magician Match: Rigged and Animated characters
+            Magician Match
+        </h1>
+
+        <p>Magician Match is an unreleased educational memory and pattern following game developed by Simcoach Games. 
+            A special thank you to the studio, as Simcoach Games has allowed me to share assets and visuals I created for their properties during my employment at the studio for portfolio purposes.</p>
+        
+            <p> In this game, players take on the role of a magician's apprentice, Arel, who helps the magician "Magic Moon" perform magic tricks by collecting items as requested and setting them in the proper order. 
+            The game features vibrant 2D art, engaging "magic trick" animations, and special effects to create an joyful and motivating experience. 
+            I was responsible for creating all placeholder and finalized art assets, rigging and animating characters, and implementing particle effects. 
+            Magcian Match demonstrates breadth in my artistic skills, including but not limited to:</p>
+            <ul style="margin-top: -50px;">
+                <li>2D Character Design, and Puppet Creation</li>
+                <li>2D Character Rigging, Weight Painting, and Animation</li>
+                <li>2D Environmental and Object Asset Creation</li>
+                <li>Visual Effects Creation using Particle Systems</li>
+            </ul>
+            <br>
+
+            <p>This breadth in skill and experience enables me to understand the needs of the artists I work with, and better aid in their issues.</p>
+            <p>Below are some examples of the work I created for Magician Match.</p>
+    </div>
+
+    <div class="Project">
+        <h1>
+            Magician Match: Rigged and Animated Characters
         </h1>
         <img src="../assets/MagicianMatchRiggedCharacters.png"
             alt="Thumbnail image for the Magician Match project, showing two rigged and animated 2D characters facing each other.">
@@ -42,15 +156,15 @@
 
     <div class="Project">
         <h1>
-            Magician Match: Reusable VFX Particle System Creation
+            Magician Match: Reusable VFX Particle System Collection
         </h1>
         <img src="../assets/MagicianMatchStarParticles.png"
             alt="Thumbnail image for the Magician Match project, showing star particles coming from a wand.">
             <img src="../assets/MagicianMatchRainParticles.png"
             alt="Thumbnail image for the Magician Match project, showing rain particles coming from a cloud.">
-            <img style="width: 25%;" src="../assets/MagicianMatchPaperParticles.png"
+            <img src="../assets/MagicianMatchPaperParticles.png"
             alt="Thumbnail image for the Magician Match project, showing paper particles coming from a scissors puppet.">
-            <img style="width: 70%;" src="../assets/MagicianMatchMoneyParticles.png"
+            <img src="../assets/MagicianMatchMoneyParticles.png"
             alt="Thumbnail image for the Magician Match project, showing money particles coming from a money dispenser.">
 
         
@@ -59,7 +173,7 @@
 
     <div class="Project">
         <h1>
-            Magician Match: Reusable Asset Creation
+            Magician Match: Reusable Asset Collection
         </h1>
         <img src="../assets/MagicianMatchReusableAssets.png"
             alt="Thumbnail image for the Magician Match project, showing various object assets.">
@@ -68,8 +182,27 @@
 
     </div>
 
+    <div class="Project">
+        <h3><a rel="stylesheet" href="https://seankirbyorourke.itch.io/">Check out my released games on itch.io!</h3>
+
+        
+
+    </div>
+
+    
     
    
 </body>
+<footer style="text-align: center;">
+
+    <a rel="stylesheet" href="./contacts.html" >
+        Github, External Links, and Contact Info
+    </a>
+    <br><br><br>
+    <a rel="stylesheet" href="./index.html" >
+        Home
+    </a>
+    
+</footer>
 
 </html>

@@ -90,20 +90,21 @@ h3 {
 .imgHolder>img {
     padding-left: 10%;
     height: 100%;
+    width: auto;
 
 }
 
-#forestConcept {
+/* #forestConcept {
     width: 100%;
-    /* width:500px; padding-left: 30%; */
-}
+    width:500px; padding-left: 30%;
+} */
 
 #audacityTimeline {
     width: 30%;
 }
 
 #primereTimeline {
-    height: 315px;
+    width: 35%;
 }
 
 #flexVideo {
@@ -117,4 +118,11 @@ p {
 
 audio::-webkit-media-controls-panel {
     background-color: rgb(170, 255, 227);
+}
+
+img {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+    
 }
