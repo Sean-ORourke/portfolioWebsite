@@ -15,107 +15,87 @@
     </a>
     <h1>Technical Art Projects</h1>
 
-    <div class="Project">
-        <h3><a rel="stylesheet" href="https://github.com/Sean-ORourke/HLSL-Shader">Outline Shader with Adjustable Material Properties</h3>
-        
-            <!-- <img src="../assets/Outline_Shader_Thumbnail.png"
-                alt="Thumbnail image for the HLSL-Shader GitHub repository, showing a 3D model of a sphere with an outline shader applied."> -->
-        </a>
+    <div name="IridescentGlassCube" class="Project">
+        <h1>Iridescent Glass Cube Shader</h1>
 
-        <h3>HLSL Shader Creation in Unity URP</h3>
+        <h3>[Current Development -- In Progress!] Shader Creation in Unreal Material Graph</h3>
 
-        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/FNbYnIuK3zo?si=r7iNx0FOqE0jsN25" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/w5l1-Q9RUuA?si=xbr52OFSJuNlJrAo"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+        <h3>Overview</h3>
 
-<p>
-  This project is a custom outline shader written in HLSL using Unity’s ShaderLab
-  syntax for the Universal Render Pipeline (URP). I created it as a focused
-  learning exercise to gain hands-on experience with HLSL, shader fundamentals,
-  and Unity’s Universal Render Pipeline.
-</p>
+        <p>
+            A custom iridescent glass shader created in Unreal Engine using the Material Editor! I
+            created it as a learning exercise to gain hands-on experience with Unreal Engine's Material Editor,
+            shader creation process, and the principles of iridescence in materials. The shader is designed to simulate
+            the optical phenomenon of iridescence in a stylized manner, where the color of the material changes based on
+            the viewing angle. The shader utilizes a combination of Fresnel effects, and lerp color
+            blending techniques to achieve a stylized iridescence effect.
+        </p>
 
-<h3>Editor Adjustable Attributes</h3>
+        <h3>Current Features</h3>
+        <ul>
+            <li>Stylized iridescent effect that places rainbow color on the edge of the object.</li>
+            <li>See-through transparency and glass-like reflections.</li>
+            <li>Adjustable Fresnel blending effect to control the colors of iridescence based on viewing angle.</li>
+            <li>Toggle between different iridescent color palettes (e.g., rainbow, ocean).</li>
+            <li>Heightened stylization and "pop" through emissive properties.</li>
+        </ul>
 
-<img
-  src="../assets/Editable_Attributes.png"
-  alt="Material Attributes in Unity Editor."
-/>
-
-<p>
-  My outline shader has several adjustable attributes which can be changed in the
-  material editor. This allows the user of the material to easily customize the
-  shader’s behavior without modifying code.
-</p>
-
-<ul style="margin-top: -50px;">
-  <li>
-    I enjoyed learning about toggles, which enables the user to toggle the outline
-    on and off, and switch between a procedurally determined outline color or a
-    manually selected one.
-  </li>
-
-  <li>
-    For the procedurally determined border color, I used the <code>dot()</code>
-    function to calculate the grayscale luminance value of the base color, and
-    then used that luminance value to drive a <code>lerp()</code> blend for the
-    outline color.
-  </li>
-
-  <li>
-    Additionally, the user of the material can adjust the base color, select a
-    texture, modify texture tiling, and control the width of the outline.
-  </li>
-</ul>
-
-<h3>In Progress and Future Directions</h3>
-
-<img
-  src="../assets/In_Progress_Photo.png"
-  alt="Unity editor showing the shader in an earlier state, without toggles."
-/>
-
-<p>
-  My goal for this project was to learn the fundamentals of HLSL and ShaderLab by
-  throwing myself into the process and learning through iteration. I now feel I
-  have a solid understanding of variable declaration, data types, structs,
-  interpolators, and per-vertex versus per-fragment logic in HLSL.
-</p>
-
-<p>
-  I also learned several important conventions and optimizations, such as
-  utilizing floats instead of booleans for toggles, and using the
-  <code>lerp()</code> function with a 0/1 value instead of an if/else statement. I
-  implemented this approach after learning that avoiding branching logic is
-  generally more GPU-friendly. Using floats instead of booleans also allows these
-  values to be directly composed into mathematical functions like
-  <code>lerp()</code>.
-</p>
-
-<p>
-  Additionally, I learned how human perceptual weighting of RGB channels applies
-  to perceived luminance in the digital RGBA color spectrum, and how to account
-  for this using weighted modifiers inside the <code>dot()</code> function.
-  Experimenting with multiple implementations helped reinforce these conventions
-  and gave me a more intuitive understanding of how shader math translates to
-  visual results.
-</p>
-
-<img
-  src="../assets/Outline_Collision_Bug.png"
-  alt="Sphere Intersecting with Border."
-/>
-
-<p>
-  One known issue is that intersecting geometry can become visible inside the
-  outline, breaking the illusion of a solid border. With more time, I would
-  address this using depth-based techniques or stencil buffer approaches to
-  ensure the outline remains visually solid, even in close-up or narrative-driven
-  scenes.
-</p>
+        <h3>Ongoing Development</h3>
+        <p>
+            I am satisfied with the current stylized visual state of the shader, but I am still working on refining the
+            material
+            instance interface to allow for more user-friendly adjustments of the iridescent properties. In my opinion,
+            a tool is only as good as its usability -- so I am also
+            exploring additional techniques to enhance the features and adjustability of the shader, such as
+            incorporating chained
+            lerps in a material graph component node to include more colors in the fresnel effects (imagine getting in a
+            whole rainbow!). Ideally, I could
+            make a visually simple, adjustable and maintainable component, so that artists using this shader can easily
+            adjust the iridescent properties without needing to modify the underlying material graph.
 
     </div>
 
-    <div class="Project">
+    <div name="SparkleSprays" class="Project">
+        <h1>Glitter Sprays</h1>
+
+        <h3>[Current Development -- In Progress!] Spray Material Creation in Unreal Material Graph</h3>
+
+        <p>Also featured in the video above! (teal dragon head)</p>
+
+        <h3>Overview</h3>
+
+        <p>
+            Material Sprays with a sparkle effect. The material is designed to simulate the
+            appearance of sparkling glitter that emit light and shimmer as the player camera moves. The spray effect
+            can be customized in terms of color.
+        </p>
+
+        <h3>Current Features</h3>
+        <ul>
+            <li>Adjustable Fresnel effect to control the intensity of the sparkle effect based on viewing angle.</li>
+            <li>Time-based animation for the sparkle effect.</li>
+        </ul>
+
+        <h3>Ongoing Development</h3>
+        <p>
+            Adjustment of sparkles to be more visually appealing, and to have a more adjustable material instance
+            interface. This would include being able to adjust the size, shape of the spray, sparkle size, intensity of
+            the
+            sparkles, and speed of the
+            sparkle animation. I am also exploring additional techniques to enhance the features and adjustability of
+            the material, such as incorporating more complex particle systems and texture animations to create a more
+            dynamic and fun effect. The sparkle effect is achieved by utilizing a combination of
+            particle systems, material shaders, and texture animations.
+        </p>
+
+    </div>
+
+    <div name="WavingFlagShader" class="Project">
         <h1>
             Waving Flag Shader
         </h1>
@@ -128,50 +108,158 @@
             alt="Thumbnail image for the waving flag shader project, showing a 3D model of a flag with a waving shader applied.">
 
         <p>
-            This project is a simple waving flag shader created in Unreal Engine using the Material Editor, and Autodesk Maya. 
-            I created it as a focused learning exercise to gain hands-on experience with Unreal Engine's Material Editor, shader creation process, and simple modeling in Autodesk Maya.
+            This project is a simple waving flag shader created in Unreal Engine using the Material Editor, and Autodesk
+            Maya.
+            I created it as a focused learning exercise to gain hands-on experience with Unreal Engine's Material
+            Editor, shader creation process, and simple modeling in Autodesk Maya.
         </p>
 
         <p>
-            The shader uses a sine wave function to create the waving motion, which is driven by the world position of the vertices. 
-            I also implemented a simple texture coordinate manipulation to create a more dynamic and realistic waving effect. 
-            This project helped me understand the basics of shader creation with material nodes in Unreal Engine and how to manipulate vertex positions and texture coordinates to achieve desired visual effects.
+            The shader uses a sine wave function to create the waving motion, which is driven by the world position of
+            the vertices.
+            I also implemented a simple texture coordinate manipulation to create a more dynamic and realistic waving
+            effect.
+            This project helped me understand the basics of shader creation with material nodes in Unreal Engine and how
+            to manipulate vertex positions and texture coordinates to achieve desired visual effects.
         </p>
 
         <img src="../assets/flagShaderMaterialNodes.png"
             alt="Thumbnail image for the waving flag shader project, showing the material node setup in Unreal Engine.">
 
         <p>
-            With more time, I would have made a flag model with a higher vertex count to create a smoother waving effect. 
-            In my shader, I would simplify and collapse nodes to improve performance. I would further develop the shader to include additional parameters to allow for speed and intensity customization of the waving motion.
+            With more time, I would have made a flag model with a higher vertex count to create a smoother waving
+            effect.
+            In my shader, I would simplify and collapse nodes to improve performance. I would further develop the shader
+            to include additional parameters to allow for speed and intensity customization of the waving motion.
         </p>
     </div>
 
-    <div class="Project">
+    <div name="HLSL-Shader" class="Project">
+        <h3><a rel="stylesheet" href="https://github.com/Sean-ORourke/HLSL-Shader">Outline Shader with Adjustable
+                Material Properties</h3>
+
+        <!-- <img src="../assets/Outline_Shader_Thumbnail.png"
+                alt="Thumbnail image for the HLSL-Shader GitHub repository, showing a 3D model of a sphere with an outline shader applied."> -->
+        </a>
+
+        <h3>HLSL Shader Creation in Unity URP</h3>
+
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/FNbYnIuK3zo?si=r7iNx0FOqE0jsN25"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+        <p>
+            This project is a custom outline shader written in HLSL using Unity’s ShaderLab
+            syntax for the Universal Render Pipeline (URP). I created it as a focused
+            learning exercise to gain hands-on experience with HLSL, shader fundamentals,
+            and Unity’s Universal Render Pipeline.
+        </p>
+
+        <h3>Editor Adjustable Attributes</h3>
+
+        <img src="../assets/Editable_Attributes.png" alt="Material Attributes in Unity Editor." />
+
+        <p>
+            My outline shader has several adjustable attributes which can be changed in the
+            material editor. This allows the user of the material to easily customize the
+            shader’s behavior without modifying code.
+        </p>
+
+        <ul style="margin-top: -50px;">
+            <li>
+                I enjoyed learning about toggles, which enables the user to toggle the outline
+                on and off, and switch between a procedurally determined outline color or a
+                manually selected one.
+            </li>
+
+            <li>
+                For the procedurally determined border color, I used the <code>dot()</code>
+                function to calculate the grayscale luminance value of the base color, and
+                then used that luminance value to drive a <code>lerp()</code> blend for the
+                outline color.
+            </li>
+
+            <li>
+                Additionally, the user of the material can adjust the base color, select a
+                texture, modify texture tiling, and control the width of the outline.
+            </li>
+        </ul>
+
+        <h3>In Progress Photo and Future Directions</h3>
+
+        <img src="../assets/In_Progress_Photo.png"
+            alt="Unity editor showing the shader in an earlier state, without toggles." />
+
+        <p>
+            My goal for this project was to learn the fundamentals of HLSL and ShaderLab by
+            throwing myself into the process and learning through iteration. I now feel I
+            have a solid understanding of variable declaration, data types, structs,
+            interpolators, and per-vertex versus per-fragment logic in HLSL.
+        </p>
+
+        <p>
+            I also learned several important conventions and optimizations, such as
+            utilizing floats instead of booleans for toggles, and using the
+            <code>lerp()</code> function with a 0/1 value instead of an if/else statement. I
+            implemented this approach after learning that avoiding branching logic is
+            generally more GPU-friendly. Using floats instead of booleans also allows these
+            values to be directly composed into mathematical functions like
+            <code>lerp()</code>.
+        </p>
+
+        <p>
+            Additionally, I learned how human perceptual weighting of RGB channels applies
+            to perceived luminance in the digital RGBA color spectrum, and how to account
+            for this using weighted modifiers inside the <code>dot()</code> function.
+            Experimenting with multiple implementations helped reinforce these conventions
+            and gave me a more intuitive understanding of how shader math translates to
+            visual results.
+        </p>
+
+        <img src="../assets/Outline_Collision_Bug.png" alt="Sphere Intersecting with Border." />
+
+        <p>
+            One known issue is that intersecting geometry can become visible inside the
+            outline, breaking the illusion of a solid border. With more time, I would
+            address this using depth-based techniques or stencil buffer approaches to
+            ensure the outline remains visually solid, even in close-up or narrative-driven
+            scenes.
+        </p>
+
+    </div>
+
+    <div name="MagicianMatch" class="Project">
         <h1>
             Magician Match
         </h1>
 
-        <p>Magician Match is an unreleased educational memory and pattern following game developed by Simcoach Games. 
-            A special thank you to the studio, as Simcoach Games has allowed me to share assets and visuals I created for their properties during my employment at the studio for portfolio purposes.</p>
-        
-            <p> In this game, players take on the role of a magician's apprentice, Arel, who helps the magician "Magic Moon" perform magic tricks by collecting items as requested and setting them in the proper order. 
-            The game features vibrant 2D art, engaging "magic trick" animations, and special effects to create an joyful and motivating experience. 
-            I was responsible for creating all placeholder and finalized art assets, rigging and animating characters, and implementing particle effects. 
-            Magcian Match demonstrates breadth in my artistic skills, including but not limited to:</p>
-            <ul style="margin-top: -50px;">
-                <li>2D Character Design, and Puppet Creation</li>
-                <li>2D Character Rigging, Weight Painting, and Animation</li>
-                <li>2D Environmental and Object Asset Creation</li>
-                <li>Visual Effects Creation using Particle Systems</li>
-            </ul>
-            <br>
+        <p>Magician Match is an unreleased educational memory and pattern following game developed by Simcoach Games.
+            A special thank you to the studio, as Simcoach Games has allowed me to share assets and visuals I created
+            for their properties during my employment at the studio for portfolio purposes.</p>
 
-            <p>This breadth in skill and experience enables me to understand the needs of the artists I work with, and better aid in their issues.</p>
-            <p>Below are some examples of the work I created for Magician Match.</p>
+        <p> In this game, players take on the role of a magician's apprentice, Arel, who helps the magician "Magic Moon"
+            perform magic tricks by collecting items as requested and setting them in the proper order.
+            The game features vibrant 2D art, engaging "magic trick" animations, and special effects to create an joyful
+            and motivating experience.
+            I was responsible for creating all placeholder and finalized art assets, rigging and animating characters,
+            and implementing particle effects.
+            Magcian Match demonstrates breadth in my artistic skills, including but not limited to:</p>
+        <ul style="margin-top: -50px;">
+            <li>2D Character Design, and Puppet Creation</li>
+            <li>2D Character Rigging, Weight Painting, and Animation</li>
+            <li>2D Environmental and Object Asset Creation</li>
+            <li>Visual Effects Creation using Particle Systems</li>
+        </ul>
+        <br>
+
+        <p>This breadth in skill and experience enables me to understand the needs of the artists I work with, and
+            better aid in their issues.</p>
+        <p>Below are some examples of the work I created for Magician Match.</p>
     </div>
 
-    <div class="Project">
+    <div name="MagicianMatchRiggedAnimatedCharacters" class="Project">
         <h1>
             Magician Match: Rigged and Animated Characters
         </h1>
@@ -179,62 +267,62 @@
             alt="Thumbnail image for the Magician Match project, showing two rigged and animated 2D characters facing each other.">
         <img src="../assets/MagicianMatchFishRiggedTankUndone.png"
             alt="Thumbnail image for the Magician Match project, showing a rigged and animated 2D character fish.">
-            <img src="../assets/MagicianMatchBellows.png"
+        <img src="../assets/MagicianMatchBellows.png"
             alt="Thumbnail image for the Magician Match project, showing a rigged and animated 2D bellows character.">
 
-        
+
 
     </div>
 
-    <div class="Project">
+    <div name="MagicianMatchVFX" class="Project">
         <h1>
             Magician Match: Reusable VFX Particle System Collection
         </h1>
         <img src="../assets/MagicianMatchStarParticles.png"
             alt="Thumbnail image for the Magician Match project, showing star particles coming from a wand.">
-            <img src="../assets/MagicianMatchRainParticles.png"
+        <img src="../assets/MagicianMatchRainParticles.png"
             alt="Thumbnail image for the Magician Match project, showing rain particles coming from a cloud.">
-            <img src="../assets/MagicianMatchPaperParticles.png"
+        <img src="../assets/MagicianMatchPaperParticles.png"
             alt="Thumbnail image for the Magician Match project, showing paper particles coming from a scissors puppet.">
-            <img src="../assets/MagicianMatchMoneyParticles.png"
+        <img src="../assets/MagicianMatchMoneyParticles.png"
             alt="Thumbnail image for the Magician Match project, showing money particles coming from a money dispenser.">
 
-        
+
 
     </div>
 
-    <div class="Project">
+    <div name="MagicianMatchReusableAssets" class="Project">
         <h1>
             Magician Match: Reusable Asset Collection
         </h1>
         <img src="../assets/MagicianMatchReusableAssets.png"
             alt="Thumbnail image for the Magician Match project, showing various object assets.">
 
-        
+
 
     </div>
 
-    <div class="Project">
+    <div name="ItchIo" class="Project">
         <h3><a rel="stylesheet" href="https://seankirbyorourke.itch.io/">Check out my released games on itch.io!</h3>
 
-        
+
 
     </div>
 
-    
-    
-   
+
+
+
 </body>
 <footer style="text-align: center;">
 
-    <a rel="stylesheet" href="./contacts.html" >
+    <a rel="stylesheet" href="./contacts.html">
         Github, External Links, and Contact Info
     </a>
     <br><br><br>
-    <a rel="stylesheet" href="./index.html" >
+    <a rel="stylesheet" href="./index.html">
         Home
     </a>
-    
+
 </footer>
 
 </html>
