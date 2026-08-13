@@ -36,6 +36,10 @@ li {
     margin-bottom: 20px;
 }
 
+.noDot {
+    list-style-type: none;
+}
+
 
 body {
     background-color: rgb(56, 61, 60);
