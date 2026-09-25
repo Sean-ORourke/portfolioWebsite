@@ -31,7 +31,7 @@ a {
 }
 
 li {
-    margin-bottom: 20px;
+    margin-bottom: 0.5%;
 }
 
 .noDot {
@@ -116,7 +116,7 @@ h3 {
 }
 
 p {
-    margin-bottom: 50px;
+    margin-bottom: 0.5%;
 }
 
 audio::-webkit-media-controls-panel {
@@ -128,4 +128,8 @@ img {
     padding-bottom: 5px;
     width: 100%;
     
+}
+
+.spacer {
+    margin: 2%;
 }
