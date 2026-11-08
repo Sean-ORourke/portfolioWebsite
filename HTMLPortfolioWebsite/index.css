@@ -62,6 +62,10 @@ h3 {
     color: rgb(170, 255, 227)
 }
 
+.resumeContainer {
+    float: right; width:40%; height: 130%;
+}
+
 
 .startBar a {
     float: left;

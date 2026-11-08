@@ -89,6 +89,12 @@ h3 {
 
 }
 
+
+
+.resumeContainer {
+ width:100%; height: 130%;
+}
+
 .imgHolder>img {
     padding-left: clamp(0%, 8vw, 10%);
     /* display: block; */
